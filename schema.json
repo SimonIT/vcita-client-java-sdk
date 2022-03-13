@@ -1,0 +1,1040 @@
+{
+  "components": {
+    "schemas": {
+      "client": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "mobile_phone": {
+            "nullable": true,
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "address": {
+            "nullable": true
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "customer_status": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+            }
+          },
+          "opt_in": {
+            "nullable": true
+          },
+          "source": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "channel": {
+            "type": "string",
+            "nullable": true
+          },
+          "campaign": {
+            "nullable": true
+          },
+          "matters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/matter"
+            }
+          },
+          "matter_term": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "data": {
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "sections": {
+            "items": {
+              "$ref": "#/components/schemas/section"
+            },
+            "type": "array"
+          },
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "data1": {
+        "properties": {
+          "auto_reply_message": {
+            "nullable": true
+          },
+          "conversation_uid": {
+            "type": "string"
+          },
+          "id": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "token": {
+            "type": "string"
+          },
+          "uid": {
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "data2": {
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "sent": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "data3": {
+        "properties": {
+          "client": {
+            "$ref": "#/components/schemas/client"
+          }
+        },
+        "type": "object"
+      },
+      "field": {
+        "properties": {
+          "default_value": {
+            "nullable": true,
+            "type": "string"
+          },
+          "enabled": {
+            "nullable": true,
+            "type": "boolean"
+          },
+          "hidden": {
+            "nullable": true,
+            "type": "boolean"
+          },
+          "id": {
+            "nullable": true,
+            "type": "string"
+          },
+          "keep_asking": {
+            "nullable": true,
+            "type": "boolean"
+          },
+          "label": {
+            "nullable": true,
+            "type": "string"
+          },
+          "object_type": {
+            "nullable": true,
+            "type": "string"
+          },
+          "required": {
+            "nullable": true,
+            "type": "boolean"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "matter": {
+        "type": "object",
+        "properties": {
+          "uid": {
+            "type": "string"
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/field"
+            }
+          }
+        }
+      },
+      "portals_business_uid_contact_get_form_get_200_response": {
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/data"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "portals_business_uid_contact_submit_post_200_response": {
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/data1"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "portals_business_uid_share_documents_form_get_form_get_200_response": {
+        "properties": {
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/data"
+            },
+            "type": "array"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "portals_business_uid_share_documents_form_submit_post_200_response": {
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/data1"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "portals_business_uid_authentications_send_code_post_200_response": {
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/data2"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "portals_business_uid_client_get_200_response": {
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/data3"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "section": {
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "editable": {
+            "nullable": true,
+            "type": "boolean"
+          },
+          "fields": {
+            "items": {
+              "items": {
+                "$ref": "#/components/schemas/field"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "default": {
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://ignore.myclients.io",
+            "scopes": {
+              "client_api": "All client_api related operations",
+              "client_api_create": "client_api create scope",
+              "client_api_delete": "client_api delete scope",
+              "client_api_read": "client_api read scope",
+              "client_api_update": "client_api update scope"
+            }
+          }
+        },
+        "type": "oauth2",
+        "x-scopes-bindings": {
+          "client_api": "",
+          "client_api_create": "",
+          "client_api_delete": "",
+          "client_api_read": "",
+          "client_api_update": ""
+        }
+      }
+    }
+  },
+  "info": {
+    "title": "client_api API",
+    "version": "v2.0"
+  },
+  "openapi": "3.0.0",
+  "paths": {
+    "/portals/{business_uid}/contact/get_form": {
+      "get": {
+        "description": "Gets the leave details form of the business.",
+        "parameters": [
+          {
+            "description": "business_uid",
+            "in": "path",
+            "name": "business_uid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "API Token. The resulting header should look like this: 'Authorization: \"Bearer API_TOKEN\"'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "response": {
+                    "value": {
+                      "data": {
+                        "description": "Please fill out your details below so we can process your request.",
+                        "sections": [
+                          {
+                            "description": "Please fill out your details below so we can process your request.",
+                            "fields": [
+                              [
+                                {
+                                  "hidden": false,
+                                  "id": "subject",
+                                  "label": "Subject",
+                                  "required": true,
+                                  "type": "subject"
+                                }
+                              ],
+                              [
+                                {
+                                  "hidden": false,
+                                  "id": "message",
+                                  "label": "Message",
+                                  "required": true,
+                                  "type": "multiline"
+                                }
+                              ]
+                            ],
+                            "title": "",
+                            "type": "message_info"
+                          },
+                          {
+                            "description": "translation missing: en.settings.forms.leave_details.section.client_details.description",
+                            "editable": true,
+                            "fields": [
+                              [
+                                {
+                                  "default_value": "",
+                                  "id": "z0yt52l2jfeai0pm",
+                                  "keep_asking": false,
+                                  "label": "email_label",
+                                  "object_type": "contact",
+                                  "required": true,
+                                  "type": "email"
+                                }
+                              ],
+                              [
+                                {
+                                  "default_value": "",
+                                  "id": "kil21g1ak9whvlcl",
+                                  "keep_asking": false,
+                                  "label": "firstname_label",
+                                  "object_type": "contact",
+                                  "required": true,
+                                  "type": "firstname"
+                                }
+                              ]
+                            ],
+                            "title": "Client Info",
+                            "type": "fields"
+                          },
+                          {
+                            "description": "Enter a message you want your clients to read before they submit",
+                            "fields": [
+                              [
+                                {
+                                  "default_value": "",
+                                  "enabled": false,
+                                  "label": "Business policy",
+                                  "type": "policy"
+                                }
+                              ]
+                            ],
+                            "title": "Business policy",
+                            "type": "policies"
+                          }
+                        ],
+                        "title": "Leave details form",
+                        "type": "leave_details"
+                      },
+                      "status": "OK"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/portals_business_uid_contact_get_form_get_200_response"
+                }
+              }
+            },
+            "description": "Success"
+          }
+        },
+        "security": [
+          {
+            "default": [
+              "client_api"
+            ]
+          }
+        ],
+        "summary": "Get Leave Details Form",
+        "tags": [
+          "Forms"
+        ],
+        "x-amazon-apigateway-auth": {
+          "type": "NONE"
+        },
+        "x-amazon-apigateway-integration": {
+          "httpMethod": "GET",
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "type": "http_proxy",
+          "uri": "https:///client_api/v1/portals/{business_uid}/contact/get_form"
+        },
+        "x-auth-type": "Application & Application User"
+      }
+    },
+    "/portals/{business_uid}/contact/submit": {
+      "post": {
+        "description": "Submits Leave Details Form to the business.",
+        "parameters": [
+          {
+            "description": "business_uid",
+            "in": "path",
+            "name": "business_uid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "API Token. The resulting header should look like this: 'Authorization: \"Bearer API_TOKEN\"'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "form_data": {
+                    "items": {
+                      "properties": {
+                        "fields": {
+                          "properties": {
+                            "key": {
+                              "description": "Field Id",
+                              "type": "string"
+                            },
+                            "value": {
+                              "description": "Field Value",
+                              "type": "string"
+                            }
+                          },
+                          "type": "object"
+                        }
+                      },
+                      "required": [
+                        "title",
+                        "amount",
+                        "quantity"
+                      ],
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  "source_data": {
+                    "properties": {
+                      "isWidget": {
+                        "description": "The form submitted from widget or not",
+                        "type": "boolean"
+                      },
+                      "o": {
+                        "description": "The origin type in Base64",
+                        "type": "string"
+                      },
+                      "s": {
+                        "description": "The source url",
+                        "type": "string"
+                      },
+                      "topUrl": {
+                        "description": "The top url in Base64",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "response": {
+                    "value": {
+                      "data": {
+                        "auto_reply_message": null,
+                        "conversation_uid": "htzkqj3ptf8i0vbq",
+                        "id": 7,
+                        "token": "eyJhbGciOiJIUzI1NiJ9.eyJlbnRpdHlfdWlkIjoiNXhla3U5eHJndmt4OGpmYiIsImV4dHJhIjp7ImJ1c2luZXNzX3VpZCI6ImM1MzU1NWY5MDcwOGQ5MTUifSwiZXhwIjoxNjQ2NjU0OTI4LCJyZWZyZXNoIjoxNjQ2NjM1NzI4LCJ0eXBlIjoiY2xpZW50IiwianRpIjoiZDY4YTg3ZjBkZjlkMDNhOTBlNmY2MmNkZWYyNzQ2YjcyNWM0OWM2MmYyYWZhZjY5NWY4Y2UwMTk0N2U3NzQ5MSJ9.7evb26DkIY9uKNYePk4I5Zm_PX8XF4LMbiCeny88RVk",
+                        "uid": "6b58wky6f4nwgk8s"
+                      },
+                      "status": "OK"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/portals_business_uid_contact_submit_post_200_response"
+                }
+              }
+            },
+            "description": "Success"
+          }
+        },
+        "security": [
+          {
+            "default": [
+              "client_api"
+            ]
+          }
+        ],
+        "summary": "Submits Leave Details Form",
+        "tags": [
+          "Forms"
+        ],
+        "x-amazon-apigateway-auth": {
+          "type": "NONE"
+        },
+        "x-amazon-apigateway-integration": {
+          "httpMethod": "POST",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "type": "http_proxy",
+          "uri": "https:///client_api/v1/portals/{business_uid}/contact/submit"
+        },
+        "x-auth-type": "Application & Application User"
+      }
+    },
+    "/portals/{business_uid}/share_documents_form/get_form": {
+      "get": {
+        "description": "Gets the share documents form of the business.",
+        "parameters": [
+          {
+            "description": "API Token. The resulting header should look like this: 'Authorization: \"Bearer API_TOKEN\"'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "business_uid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "response": {
+                    "value": {
+                      "data": [
+                        {
+                          "description": "Please fill out your details below so we can process your request.",
+                          "sections": [
+                            {
+                              "description": "Please fill out your details below so we can process your request.",
+                              "fields": [
+                                [
+                                  {
+                                    "id": "documents",
+                                    "label": "Select your files",
+                                    "required": true,
+                                    "type": "documents"
+                                  }
+                                ],
+                                [
+                                  {
+                                    "id": "title",
+                                    "label": "Document Title",
+                                    "required": false,
+                                    "type": "title"
+                                  }
+                                ],
+                                [
+                                  {
+                                    "id": "message",
+                                    "label": "Message",
+                                    "required": false,
+                                    "type": "multiline"
+                                  }
+                                ]
+                              ],
+                              "title": "",
+                              "type": "message_info"
+                            },
+                            {
+                              "description": "Please fill out your details below so we can process your request.",
+                              "editable": true,
+                              "fields": [
+                                {
+                                  "default_value": "",
+                                  "id": "0tq0ikpkf6amyo6",
+                                  "keep_asking": false,
+                                  "required": false,
+                                  "type": "singleline"
+                                }
+                              ],
+                              "title": "",
+                              "type": "fields"
+                            },
+                            {
+                              "description": "Enter a message you want your clients to read before they submit",
+                              "fields": [
+                                {
+                                  "default_value": "",
+                                  "enabled": true,
+                                  "label": "Business policy",
+                                  "type": "policy"
+                                }
+                              ],
+                              "title": "Business policy",
+                              "type": "policies"
+                            }
+                          ],
+                          "title": "Share documents form",
+                          "type": "share_documents"
+                        }
+                      ],
+                      "status": "OK"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/portals_business_uid_share_documents_form_get_form_get_200_response"
+                }
+              }
+            },
+            "description": "Share Documents Form"
+          }
+        },
+        "security": [
+          {
+            "default": [
+              "client_api"
+            ]
+          }
+        ],
+        "summary": "Get Share Documents Form",
+        "tags": [
+          "Forms"
+        ],
+        "x-amazon-apigateway-auth": {
+          "type": "NONE"
+        },
+        "x-amazon-apigateway-integration": {
+          "httpMethod": "GET",
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "type": "http_proxy",
+          "uri": "https:///client_api/v1/portals/{business_uid}/share_documents_form/get_form"
+        },
+        "x-auth-type": "Application & Application User"
+      }
+    },
+    "/portals/{business_uid}/share_documents_form/submit": {
+      "post": {
+        "description": "Submits Share Documents Form to the business.",
+        "parameters": [
+          {
+            "description": "API Token. The resulting header should look like this: 'Authorization: \"Bearer API_TOKEN\"'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "business_uid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "properties": {
+                  "form_data": {
+                    "items": {
+                      "properties": {
+                        "fields": {
+                          "properties": {
+                            "key": {
+                              "description": "Field Id(string), file(array), o/s(string)",
+                              "type": "object"
+                            },
+                            "value": {
+                              "description": "Field Value(string), files(binary), source(string)",
+                              "type": "object"
+                            }
+                          },
+                          "type": "object"
+                        }
+                      },
+                      "required": [
+                        "title",
+                        "amount",
+                        "quantity"
+                      ],
+                      "type": "object"
+                    },
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "response": {
+                    "value": {
+                      "data": {
+                        "conversation_uid": "jkhk87vkj98jhg8b",
+                        "token": "n98h98bakwjefbf873fb8"
+                      },
+                      "status": "OK"
+                    }
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/portals_business_uid_share_documents_form_submit_post_200_response"
+                }
+              }
+            },
+            "description": "Share Documents Form"
+          }
+        },
+        "security": [
+          {
+            "default": [
+              "client_api"
+            ]
+          }
+        ],
+        "summary": "Submits Share Documents Form",
+        "tags": [
+          "Forms"
+        ],
+        "x-amazon-apigateway-auth": {
+          "type": "NONE"
+        },
+        "x-amazon-apigateway-integration": {
+          "httpMethod": "POST",
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "type": "http_proxy",
+          "uri": "https:///client_api/v1/portals/{business_uid}/share_documents_form/submit"
+        },
+        "x-auth-type": "Application & Application User"
+      }
+    },
+    "/portals/{business_uid}/client": {
+      "get": {
+        "parameters": [
+          {
+            "description": "API Token. The resulting header should look like this: 'Authorization: \"Bearer API_TOKEN\"'",
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "business_uid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/portals_business_uid_client_get_200_response"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "default": [
+              "client_api"
+            ]
+          }
+        ],
+        "tags": [
+          "Client"
+        ]
+      }
+    },
+    "/portals/{business_uid}/authentications/logout": {
+      "post": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "business_uid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "msg": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Authentication"
+        ]
+      }
+    },
+    "/portals/{business_uid}/authentications/send_code": {
+      "post": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "business_uid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/portals_business_uid_authentications_send_code_post_200_response"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Authentication"
+        ]
+      }
+    },
+    "/portals/{business_uid}/authentications/verify_code": {
+      "post": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "business_uid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "token": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Authentication"
+        ]
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "//api.vcita.biz/client_api/v1"
+    }
+  ],
+  "x-throttling-tier": "8ReqPerSec"
+}

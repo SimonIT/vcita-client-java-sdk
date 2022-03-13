@@ -1,0 +1,18 @@
+{
+  "groupId": "com.vcita.client",
+  "artifactId": "vcita-client-java-sdk",
+  "artifactDescription": "Java SDK for vcita client api",
+  "artifactUrl": "https://github.com/SimonIT/vcita-client-java-sdk",
+  "apiPackage": "com.vcita.client.client.api",
+  "invokerPackage": "com.vcita.client.client",
+  "modelPackage": "com.vcita.client.client.model",
+  "library": "okhttp-gson",
+  "scmConnection": "scm:git:git@github.com:SimonIT/vcita-client-java-sdk.git",
+  "scmDeveloperConnection": "scm:git:git@github.com:SimonIT/vcita-client-java-sdk.git",
+  "scmUrl": "https://github.com/SimonIT/vcita-client-java-sdk",
+  "developerEmail": "simonit.orig@gmail.com",
+  "developerName": "SimonIT",
+  "developerOrganization": "SimonIT",
+  "developerOrganizationUrl": "https://github.com/SimonIT",
+  "hideGenerationTimestamp": true
+}
