@@ -20,8 +20,8 @@ import com.vcita.client.client.model.PortalsBusinessUidContactSubmitPost200Respo
 import com.vcita.client.client.model.PortalsBusinessUidShareDocumentsFormGetFormGet200Response;
 import com.vcita.client.client.model.PortalsBusinessUidShareDocumentsFormSubmitFormData;
 import com.vcita.client.client.model.PortalsBusinessUidShareDocumentsFormSubmitPost200Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,76 +31,71 @@ import java.util.Map;
 /**
  * API tests for FormsApi
  */
-@Ignore
+@Disabled
 public class FormsApiTest {
 
     private final FormsApi api = new FormsApi();
 
-    
     /**
      * Get Leave Details Form
      *
      * Gets the leave details form of the business.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void portalsBusinessUidContactGetFormGetTest() throws ApiException {
         String businessUid = null;
         String authorization = null;
-                PortalsBusinessUidContactGetFormGet200Response response = api.portalsBusinessUidContactGetFormGet(businessUid, authorization);
+        PortalsBusinessUidContactGetFormGet200Response response = api.portalsBusinessUidContactGetFormGet(businessUid, authorization);
         // TODO: test validations
     }
-    
+
     /**
      * Submits Leave Details Form
      *
      * Submits Leave Details Form to the business.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void portalsBusinessUidContactSubmitPostTest() throws ApiException {
         String businessUid = null;
         String authorization = null;
         InlineObject inlineObject = null;
-                PortalsBusinessUidContactSubmitPost200Response response = api.portalsBusinessUidContactSubmitPost(businessUid, authorization, inlineObject);
+        PortalsBusinessUidContactSubmitPost200Response response = api.portalsBusinessUidContactSubmitPost(businessUid, authorization, inlineObject);
         // TODO: test validations
     }
-    
+
     /**
      * Get Share Documents Form
      *
      * Gets the share documents form of the business.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void portalsBusinessUidShareDocumentsFormGetFormGetTest() throws ApiException {
         String authorization = null;
         String businessUid = null;
-                PortalsBusinessUidShareDocumentsFormGetFormGet200Response response = api.portalsBusinessUidShareDocumentsFormGetFormGet(authorization, businessUid);
+        PortalsBusinessUidShareDocumentsFormGetFormGet200Response response = api.portalsBusinessUidShareDocumentsFormGetFormGet(authorization, businessUid);
         // TODO: test validations
     }
-    
+
     /**
      * Submits Share Documents Form
      *
      * Submits Share Documents Form to the business.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void portalsBusinessUidShareDocumentsFormSubmitPostTest() throws ApiException {
         String authorization = null;
         String businessUid = null;
         List<PortalsBusinessUidShareDocumentsFormSubmitFormData> formData = null;
-                PortalsBusinessUidShareDocumentsFormSubmitPost200Response response = api.portalsBusinessUidShareDocumentsFormSubmitPost(authorization, businessUid, formData);
+        PortalsBusinessUidShareDocumentsFormSubmitPost200Response response = api.portalsBusinessUidShareDocumentsFormSubmitPost(authorization, businessUid, formData);
         // TODO: test validations
     }
-    
+
 }

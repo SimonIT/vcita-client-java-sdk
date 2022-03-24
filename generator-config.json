@@ -14,5 +14,6 @@
   "developerName": "SimonIT",
   "developerOrganization": "SimonIT",
   "developerOrganizationUrl": "https://github.com/SimonIT",
-  "hideGenerationTimestamp": true
+  "hideGenerationTimestamp": true,
+  "errorObjectType": "Map<String, Object>"
 }

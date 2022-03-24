@@ -19,8 +19,8 @@ import com.vcita.client.client.model.InlineObject3;
 import com.vcita.client.client.model.InlineResponse200;
 import com.vcita.client.client.model.InlineResponse2001;
 import com.vcita.client.client.model.PortalsBusinessUidAuthenticationsSendCodePost200Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,57 +30,41 @@ import java.util.Map;
 /**
  * API tests for AuthenticationApi
  */
-@Ignore
+@Disabled
 public class AuthenticationApiTest {
 
     private final AuthenticationApi api = new AuthenticationApi();
 
-    
     /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void portalsBusinessUidAuthenticationsLogoutPostTest() throws ApiException {
         String businessUid = null;
-                InlineResponse200 response = api.portalsBusinessUidAuthenticationsLogoutPost(businessUid);
+        InlineResponse200 response = api.portalsBusinessUidAuthenticationsLogoutPost(businessUid);
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void portalsBusinessUidAuthenticationsSendCodePostTest() throws ApiException {
         String businessUid = null;
         InlineObject2 inlineObject2 = null;
-                PortalsBusinessUidAuthenticationsSendCodePost200Response response = api.portalsBusinessUidAuthenticationsSendCodePost(businessUid, inlineObject2);
+        PortalsBusinessUidAuthenticationsSendCodePost200Response response = api.portalsBusinessUidAuthenticationsSendCodePost(businessUid, inlineObject2);
         // TODO: test validations
     }
-    
+
     /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void portalsBusinessUidAuthenticationsVerifyCodePostTest() throws ApiException {
         String businessUid = null;
         InlineObject3 inlineObject3 = null;
-                InlineResponse2001 response = api.portalsBusinessUidAuthenticationsVerifyCodePost(businessUid, inlineObject3);
+        InlineResponse2001 response = api.portalsBusinessUidAuthenticationsVerifyCodePost(businessUid, inlineObject3);
         // TODO: test validations
     }
-    
+
 }

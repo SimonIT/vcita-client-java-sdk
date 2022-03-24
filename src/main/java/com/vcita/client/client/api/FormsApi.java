@@ -197,8 +197,8 @@ public class FormsApi {
             Type localVarReturnType = new TypeToken<PortalsBusinessUidContactGetFormGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<PortalsBusinessUidContactGetFormGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<PortalsBusinessUidContactGetFormGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -346,8 +346,8 @@ public class FormsApi {
             Type localVarReturnType = new TypeToken<PortalsBusinessUidContactSubmitPost200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<PortalsBusinessUidContactSubmitPost200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<PortalsBusinessUidContactSubmitPost200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -493,8 +493,8 @@ public class FormsApi {
             Type localVarReturnType = new TypeToken<PortalsBusinessUidShareDocumentsFormGetFormGet200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<PortalsBusinessUidShareDocumentsFormGetFormGet200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<PortalsBusinessUidShareDocumentsFormGetFormGet200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }
@@ -646,8 +646,8 @@ public class FormsApi {
             Type localVarReturnType = new TypeToken<PortalsBusinessUidShareDocumentsFormSubmitPost200Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
         } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<PortalsBusinessUidShareDocumentsFormSubmitPost200Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<PortalsBusinessUidShareDocumentsFormSubmitPost200Response>(){});
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, Object>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, Object>>(){});
             throw e;
         }
     }

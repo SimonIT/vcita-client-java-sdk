@@ -27,7 +27,7 @@ public class ApiException extends Exception {
     private int code = 0;
     private Map<String, List<String>> responseHeaders = null;
     private String responseBody = null;
-    private Object errorObject = null;
+    private Map<String, Object> errorObject = null;
     private GenericType errorObjectType = null;
  
     /**
@@ -179,7 +179,7 @@ public class ApiException extends Exception {
      *
      * @return Error object
      */
-    public Object getErrorObject() {
+    public Map<String, Object> getErrorObject() {
         return errorObject;
     }
 
@@ -188,7 +188,7 @@ public class ApiException extends Exception {
      *
      * @param errorObject Error object
      */
-    public void setErrorObject(Object errorObject) {
+    public void setErrorObject(Map<String, Object> errorObject) {
         this.errorObject = errorObject;
     }
 }
