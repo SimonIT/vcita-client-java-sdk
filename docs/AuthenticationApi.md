@@ -2,11 +2,11 @@
 
 All URIs are relative to *http://api.vcita.biz/client_api/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**portalsBusinessUidAuthenticationsLogoutPost**](AuthenticationApi.md#portalsBusinessUidAuthenticationsLogoutPost) | **POST** /portals/{business_uid}/authentications/logout | 
-[**portalsBusinessUidAuthenticationsSendCodePost**](AuthenticationApi.md#portalsBusinessUidAuthenticationsSendCodePost) | **POST** /portals/{business_uid}/authentications/send_code | 
-[**portalsBusinessUidAuthenticationsVerifyCodePost**](AuthenticationApi.md#portalsBusinessUidAuthenticationsVerifyCodePost) | **POST** /portals/{business_uid}/authentications/verify_code | 
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**portalsBusinessUidAuthenticationsLogoutPost**](AuthenticationApi.md#portalsBusinessUidAuthenticationsLogoutPost) | **POST** /portals/{business_uid}/authentications/logout |  |
+| [**portalsBusinessUidAuthenticationsSendCodePost**](AuthenticationApi.md#portalsBusinessUidAuthenticationsSendCodePost) | **POST** /portals/{business_uid}/authentications/send_code |  |
+| [**portalsBusinessUidAuthenticationsVerifyCodePost**](AuthenticationApi.md#portalsBusinessUidAuthenticationsVerifyCodePost) | **POST** /portals/{business_uid}/authentications/verify_code |  |
 
 
 <a name="portalsBusinessUidAuthenticationsLogoutPost"></a>
@@ -47,9 +47,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **businessUid** | **String**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUid** | **String**|  | |
 
 ### Return type
 
@@ -67,7 +67,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+| **200** | OK |  -  |
 
 <a name="portalsBusinessUidAuthenticationsSendCodePost"></a>
 # **portalsBusinessUidAuthenticationsSendCodePost**
@@ -108,10 +108,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **businessUid** | **String**|  |
- **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUid** | **String**|  | |
+| **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional] |
 
 ### Return type
 
@@ -129,7 +129,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+| **200** | OK |  -  |
 
 <a name="portalsBusinessUidAuthenticationsVerifyCodePost"></a>
 # **portalsBusinessUidAuthenticationsVerifyCodePost**
@@ -170,10 +170,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **businessUid** | **String**|  |
- **inlineObject3** | [**InlineObject3**](InlineObject3.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUid** | **String**|  | |
+| **inlineObject3** | [**InlineObject3**](InlineObject3.md)|  | [optional] |
 
 ### Return type
 
@@ -191,5 +191,5 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+| **200** | OK |  -  |
 

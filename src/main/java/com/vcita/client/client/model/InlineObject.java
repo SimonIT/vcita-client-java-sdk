@@ -40,6 +40,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -117,6 +118,7 @@ public class InlineObject {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -184,6 +186,7 @@ public class InlineObject {
           throw new IllegalArgumentException(String.format("The required field(s) %s in InlineObject is not found in the empty JSON string", InlineObject.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {

@@ -2,9 +2,9 @@
 
 All URIs are relative to *http://api.vcita.biz/client_api/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**portalsBusinessUidClientGet**](ClientApi.md#portalsBusinessUidClientGet) | **GET** /portals/{business_uid}/client | 
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**portalsBusinessUidClientGet**](ClientApi.md#portalsBusinessUidClientGet) | **GET** /portals/{business_uid}/client |  |
 
 
 <a name="portalsBusinessUidClientGet"></a>
@@ -51,10 +51,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| API Token. The resulting header should look like this: &#39;Authorization: \&quot;Bearer API_TOKEN\&quot;&#39; |
- **businessUid** | **String**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **authorization** | **String**| API Token. The resulting header should look like this: &#39;Authorization: \&quot;Bearer API_TOKEN\&quot;&#39; | |
+| **businessUid** | **String**|  | |
 
 ### Return type
 
@@ -72,6 +72,6 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**401** |  |  -  |
-**200** | OK |  -  |
+| **401** |  |  -  |
+| **200** | OK |  -  |
 

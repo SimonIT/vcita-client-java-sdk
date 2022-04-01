@@ -5,10 +5,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**data** | [**Data1**](Data1.md) |  |  [optional]
-**status** | **String** |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**data** | [**Data1**](Data1.md) |  |  [optional] |
+|**status** | **String** |  |  [optional] |
 
 
 

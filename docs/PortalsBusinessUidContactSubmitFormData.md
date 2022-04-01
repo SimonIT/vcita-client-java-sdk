@@ -5,9 +5,9 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**fields** | [**PortalsBusinessUidContactSubmitFields**](PortalsBusinessUidContactSubmitFields.md) |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**fields** | [**PortalsBusinessUidContactSubmitFields**](PortalsBusinessUidContactSubmitFields.md) |  |  [optional] |
 
 
 

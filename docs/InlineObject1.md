@@ -5,9 +5,9 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**formData** | [**List&lt;PortalsBusinessUidShareDocumentsFormSubmitFormData&gt;**](PortalsBusinessUidShareDocumentsFormSubmitFormData.md) |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**formData** | [**List&lt;PortalsBusinessUidShareDocumentsFormSubmitFormData&gt;**](PortalsBusinessUidShareDocumentsFormSubmitFormData.md) |  |  [optional] |
 
 
 

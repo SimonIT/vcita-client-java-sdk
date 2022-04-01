@@ -2,12 +2,12 @@
 
 All URIs are relative to *http://api.vcita.biz/client_api/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**portalsBusinessUidContactGetFormGet**](FormsApi.md#portalsBusinessUidContactGetFormGet) | **GET** /portals/{business_uid}/contact/get_form | Get Leave Details Form
-[**portalsBusinessUidContactSubmitPost**](FormsApi.md#portalsBusinessUidContactSubmitPost) | **POST** /portals/{business_uid}/contact/submit | Submits Leave Details Form
-[**portalsBusinessUidShareDocumentsFormGetFormGet**](FormsApi.md#portalsBusinessUidShareDocumentsFormGetFormGet) | **GET** /portals/{business_uid}/share_documents_form/get_form | Get Share Documents Form
-[**portalsBusinessUidShareDocumentsFormSubmitPost**](FormsApi.md#portalsBusinessUidShareDocumentsFormSubmitPost) | **POST** /portals/{business_uid}/share_documents_form/submit | Submits Share Documents Form
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**portalsBusinessUidContactGetFormGet**](FormsApi.md#portalsBusinessUidContactGetFormGet) | **GET** /portals/{business_uid}/contact/get_form | Get Leave Details Form |
+| [**portalsBusinessUidContactSubmitPost**](FormsApi.md#portalsBusinessUidContactSubmitPost) | **POST** /portals/{business_uid}/contact/submit | Submits Leave Details Form |
+| [**portalsBusinessUidShareDocumentsFormGetFormGet**](FormsApi.md#portalsBusinessUidShareDocumentsFormGetFormGet) | **GET** /portals/{business_uid}/share_documents_form/get_form | Get Share Documents Form |
+| [**portalsBusinessUidShareDocumentsFormSubmitPost**](FormsApi.md#portalsBusinessUidShareDocumentsFormSubmitPost) | **POST** /portals/{business_uid}/share_documents_form/submit | Submits Share Documents Form |
 
 
 <a name="portalsBusinessUidContactGetFormGet"></a>
@@ -56,10 +56,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **businessUid** | **String**| business_uid |
- **authorization** | **String**| API Token. The resulting header should look like this: &#39;Authorization: \&quot;Bearer API_TOKEN\&quot;&#39; |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUid** | **String**| business_uid | |
+| **authorization** | **String**| API Token. The resulting header should look like this: &#39;Authorization: \&quot;Bearer API_TOKEN\&quot;&#39; | |
 
 ### Return type
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="portalsBusinessUidContactSubmitPost"></a>
 # **portalsBusinessUidContactSubmitPost**
@@ -126,11 +126,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **businessUid** | **String**| business_uid |
- **authorization** | **String**| API Token. The resulting header should look like this: &#39;Authorization: \&quot;Bearer API_TOKEN\&quot;&#39; |
- **inlineObject** | [**InlineObject**](InlineObject.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUid** | **String**| business_uid | |
+| **authorization** | **String**| API Token. The resulting header should look like this: &#39;Authorization: \&quot;Bearer API_TOKEN\&quot;&#39; | |
+| **inlineObject** | [**InlineObject**](InlineObject.md)|  | [optional] |
 
 ### Return type
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="portalsBusinessUidShareDocumentsFormGetFormGet"></a>
 # **portalsBusinessUidShareDocumentsFormGetFormGet**
@@ -196,10 +196,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| API Token. The resulting header should look like this: &#39;Authorization: \&quot;Bearer API_TOKEN\&quot;&#39; |
- **businessUid** | **String**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **authorization** | **String**| API Token. The resulting header should look like this: &#39;Authorization: \&quot;Bearer API_TOKEN\&quot;&#39; | |
+| **businessUid** | **String**|  | |
 
 ### Return type
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Share Documents Form |  -  |
+| **200** | Share Documents Form |  -  |
 
 <a name="portalsBusinessUidShareDocumentsFormSubmitPost"></a>
 # **portalsBusinessUidShareDocumentsFormSubmitPost**
@@ -266,11 +266,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**| API Token. The resulting header should look like this: &#39;Authorization: \&quot;Bearer API_TOKEN\&quot;&#39; |
- **businessUid** | **String**|  |
- **formData** | [**List&lt;PortalsBusinessUidShareDocumentsFormSubmitFormData&gt;**](PortalsBusinessUidShareDocumentsFormSubmitFormData.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **authorization** | **String**| API Token. The resulting header should look like this: &#39;Authorization: \&quot;Bearer API_TOKEN\&quot;&#39; | |
+| **businessUid** | **String**|  | |
+| **formData** | [**List&lt;PortalsBusinessUidShareDocumentsFormSubmitFormData&gt;**](PortalsBusinessUidShareDocumentsFormSubmitFormData.md)|  | [optional] |
 
 ### Return type
 
@@ -288,5 +288,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Share Documents Form |  -  |
+| **200** | Share Documents Form |  -  |
 

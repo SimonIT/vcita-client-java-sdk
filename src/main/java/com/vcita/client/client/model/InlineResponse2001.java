@@ -23,6 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -36,6 +37,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -55,6 +57,10 @@ public class InlineResponse2001 {
   public static final String SERIALIZED_NAME_TOKEN = "token";
   @SerializedName(SERIALIZED_NAME_TOKEN)
   private String token;
+
+  public static final String SERIALIZED_NAME_ERROR = "error";
+  @SerializedName(SERIALIZED_NAME_ERROR)
+  private String error;
 
   public InlineResponse2001() { 
   }
@@ -105,6 +111,30 @@ public class InlineResponse2001 {
   }
 
 
+  public InlineResponse2001 error(String error) {
+    
+    this.error = error;
+    return this;
+  }
+
+   /**
+   * Get error
+   * @return error
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getError() {
+    return error;
+  }
+
+
+  public void setError(String error) {
+    this.error = error;
+  }
+
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -115,12 +145,24 @@ public class InlineResponse2001 {
     }
     InlineResponse2001 inlineResponse2001 = (InlineResponse2001) o;
     return Objects.equals(this.status, inlineResponse2001.status) &&
-        Objects.equals(this.token, inlineResponse2001.token);
+        Objects.equals(this.token, inlineResponse2001.token) &&
+        Objects.equals(this.error, inlineResponse2001.error);
+  }
+
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, token);
+    return Objects.hash(status, token, error);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -129,6 +171,7 @@ public class InlineResponse2001 {
     sb.append("class InlineResponse2001 {\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
+    sb.append("    error: ").append(toIndentedString(error)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -153,6 +196,7 @@ public class InlineResponse2001 {
     openapiFields = new HashSet<String>();
     openapiFields.add("status");
     openapiFields.add("token");
+    openapiFields.add("error");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -172,6 +216,7 @@ public class InlineResponse2001 {
           throw new IllegalArgumentException(String.format("The required field(s) %s in InlineResponse2001 is not found in the empty JSON string", InlineResponse2001.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {

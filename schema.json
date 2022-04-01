@@ -1018,6 +1018,10 @@
                     },
                     "token": {
                       "type": "string"
+                    },
+                    "error": {
+                      "type": "string",
+                      "nullable": true
                     }
                   }
                 }
